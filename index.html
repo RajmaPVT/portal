@@ -15,15 +15,23 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center; /* Center content horizontally */
-            height: 100vh;
             margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333; /* Change this to your desired navbar background color */
+        }
+        .navbar-brand, .navbar-nav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
         }
         .content {
             display: flex;
-            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            height: 80vh; /* Adjusted height to allow space for the navbar */
         }
         .box {
             width: auto;
@@ -74,6 +82,11 @@
     </style>
 </head>
 <body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Portal.io</a>
+    </nav>
+
     <div class="content">
         <iframe src="https://open.spotify.com/embed/playlist/0CFuMybe6s77w6QQrJjW7d?utm_source=generator" width="500" height="382px" frameborder="" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="box">
@@ -117,8 +130,13 @@
         </div>
     </div>
 
+    <!-- Bootstrap JS and Popper.js for Bootstrap features -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for the image slideshow -->
     <script>
-        // JavaScript for the image slideshow
         let slideIndex = 0;
         showSlides();
 
