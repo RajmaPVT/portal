@@ -24,9 +24,12 @@
         .content {
             display: flex;
             gap: 40px;
+            max-width: 1200px; /* Set a maximum width for the content */
+            width: 100%;
         }
         .box {
-            width: auto;
+            width: 100%;
+            max-width: 355px; /* Set a maximum width for the box */
             height: 382px;
             border-radius: 12px;
             background-color: rgba(255, 255, 255, 0.8);
@@ -61,60 +64,81 @@
             margin: 20px 0;
         }
         .slideshow-container {
-            width: 700px;
-            height: 382px; /* Adjusted width and height for the slideshow container */
+            width: 100%;
+            max-width: 700px; /* Set a maximum width for the slideshow container */
+            height: 382px;
             position: relative;
         }
         .mySlides img {
-            width: 100%; /* Make images fill the container width */
-            height: 100%; /* Make images fill the container height */
-            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 12px;
+        }
+
+        @media (max-width: 992px) {
+            .content {
+                flex-direction: column;
+            }
+            .box {
+                max-width: 100%; /* Adjust maximum width for smaller screens */
+            }
+            .slideshow-container {
+                max-width: 100%; /* Adjust maximum width for smaller screens */
+            }
+            /* Add more styles as needed */
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <iframe src="https://open.spotify.com/embed/playlist/0CFuMybe6s77w6QQrJjW7d?utm_source=generator" width="500" height="382px" frameborder="" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <div class="box">
-            <div class="button-container">
-                <a href="https://www.instagram.com/coder.aryan/"><i class="bi bi-instagram"></i>Instagram</a>
-                <a href="https://www.linkedin.com/in/aryan-kaul-83a857253"><i class="bi bi-linkedin"></i>LinkedIn</a>
-                <a href="https://discord.gg/vpkmgcMTUD"><i class="bi bi-discord"></i>Discord</a>
-                <a href="https://github.com/RajmaPlAyZ"><i class="bi bi-github"></i>Github</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <iframe src="https://open.spotify.com/embed/playlist/0CFuMybe6s77w6QQrJjW7d?utm_source=generator" width="100%" height="382px" frameborder="" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
-            <hr class="separator" />
-            <div class="button-container">
-                <a href="https://rajmapvt.github.io/aryankaul"><i class="bi bi-person"></i>Portfolio</a>
-                <a href="https://rajmapvt.github.io/pixelfight"><i class="bi bi-app"></i>Pixel Fight</a>
-                <a href="https://trello.com/1/cards/657025427779e72bc2dd61d9/attachments/65708804eaa5556f2cb765f4/download/image.png"><i class="bi bi-cloud"></i>ToDo App</a>
-                <a href="https://rajmapvt.github.io/aryankaul/#work"><i class="bi bi-code-slash"></i>Other</a>
+            <div class="col-md-6">
+                <div class="box">
+                    <div class="button-container">
+                        <a href="https://www.instagram.com/coder.aryan/"><i class="bi bi-instagram"></i>Instagram</a>
+                        <a href="https://www.linkedin.com/in/aryan-kaul-83a857253"><i class="bi bi-linkedin"></i>LinkedIn</a>
+                        <a href="https://discord.gg/vpkmgcMTUD"><i class="bi bi-discord"></i>Discord</a>
+                        <a href="https://github.com/RajmaPlAyZ"><i class="bi bi-github"></i>Github</a>
+                    </div>
+                    <hr class="separator" />
+                    <div class="button-container">
+                        <a href="https://rajmapvt.github.io/aryankaul"><i class="bi bi-person"></i>Portfolio</a>
+                        <a href="https://rajmapvt.github.io/pixelfight"><i class="bi bi-app"></i>Pixel Fight</a>
+                        <a href="https://trello.com/1/cards/657025427779e72bc2dd61d9/attachments/65708804eaa5556f2cb765f4/download/image.png"><i class="bi bi-cloud"></i>ToDo App</a>
+                        <a href="https://rajmapvt.github.io/aryankaul/#work"><i class="bi bi-code-slash"></i>Other</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="slideshow-container">
-            <div class="mySlides">
-                <img src="images/image1.png" alt="Slide 1">
-            </div>
-            <div class="mySlides">
-                <img src="images/image2.png" alt="Slide 2">
-            </div>
-            <div class="mySlides">
-                <img src="images/image3.png" alt="Slide 3">
-            </div>
-            <div class="mySlides">
-                <img src="images/image4.png" alt="Slide 3">
-            </div>
-            <div class="mySlides">
-                <img src="images/image5.jfif" alt="Slide 3">
-            </div>
-            <div class="mySlides">
-                <img src="images/image6.jfif" alt="Slide 3">
-            </div>
-            <div class="mySlides">
-                <img src="images/image7.PNG" alt="Slide 3">
-            </div>
-            <!-- Add more slides as needed -->
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="images/image1.png" alt="Slide 1">
         </div>
+        <div class="mySlides">
+            <img src="images/image2.png" alt="Slide 2">
+        </div>
+        <div class="mySlides">
+            <img src="images/image3.png" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img src="images/image4.png" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img src="images/image5.jfif" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img src="images/image6.jfif" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img src="images/image7.PNG" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed -->
     </div>
 
     <script>
